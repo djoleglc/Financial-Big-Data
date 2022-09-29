@@ -14,12 +14,12 @@ vol = yang_zhang_vol(price)
 plt.plot(vol)
 
 
-#logreturn = np.log(price/price.shift(1)).dropna()
+logreturn = np.log(price/price.shift(1)).dropna()
 
 
 #you can pass a dataframe of logreturns or only a pd.Series with only one 
-#autocorrelation(logreturn.abs(), 50, plot = True, include_zero = False, save = False )
+autocorrelation(logreturn.abs(), 50, plot = True, include_zero = False, save = False )
 
 #ecdf calculation 
-#abs_ecdf(logreturn)
+abs_ecdf(logreturn)
 
